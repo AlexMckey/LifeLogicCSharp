@@ -23,5 +23,9 @@ namespace LifeLogic {
                 Arr[i] = random.Next (2) == 1;
             }
         }
+
+        public void SetMiddleOne () {
+            Arr[Size / 2] = true;
+        }
     }
 }

@@ -10,6 +10,7 @@ namespace LifeLogicTests {
         public void Setup () {
             simpleLogic = new LineLifeLogic (6);
             basicLogic = new LineLifeLogic (new bool[] { true, false, true, true, false });
+
         }
 
         [Test]
@@ -33,6 +34,13 @@ namespace LifeLogicTests {
             simpleLogic.SetRandom ();
             Assert.That (simpleLogic.Size, Is.EqualTo (6));
             Assert.That (simpleLogic.Arr, Is.Not.All.EqualTo (false));
+        }
+
+        [Test]
+        public void LineLifeLogicMiddleOneLogic () {
+            simpleLogic.SetMiddleOne ();
+            Assert.That (simpleLogic.Arr, Has.Exactly (1).EqualTo (true));
+            Assert.That (simpleLogic.Arr[simpleLogic.Size / 2], Is.EqualTo (true));
         }
     }
 }
