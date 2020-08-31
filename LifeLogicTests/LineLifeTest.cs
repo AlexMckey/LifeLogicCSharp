@@ -42,5 +42,12 @@ namespace LifeLogicTests {
             Assert.That (simpleLogic.Arr, Has.Exactly (1).EqualTo (true));
             Assert.That (simpleLogic.Arr[simpleLogic.Size / 2], Is.EqualTo (true));
         }
+
+        [Test]
+        public void LineLifeLogicToString () {
+            simpleLogic.SetMiddleOne ();
+            Assert.That (simpleLogic.ToString (), Is.EqualTo ("   #  "));
+            Assert.That (basicLogic.ToString (), Is.EqualTo ("# ## "));
+        }
     }
 }

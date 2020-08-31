@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace LifeLogic {
     public class LineLifeLogic {
@@ -26,6 +27,14 @@ namespace LifeLogic {
 
         public void SetMiddleOne () {
             Arr[Size / 2] = true;
+        }
+
+        public override string ToString () {
+            var sb = new StringBuilder (Size);
+            foreach (var item in Arr) {
+                sb.Append (item ? "#" : " ");
+            }
+            return sb.ToString ();
         }
     }
 }
