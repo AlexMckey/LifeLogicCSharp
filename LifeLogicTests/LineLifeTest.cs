@@ -89,5 +89,12 @@ namespace LifeLogicTests {
             simpleLogic.Next ();
             Assert.That (simpleLogic.Arr, Has.Exactly (1).EqualTo (true));
         }
+
+        [Test]
+        public void LineLifeLogicClear () {
+            Assert.That (basicLogic.Arr, Has.Exactly (3).EqualTo (true));
+            basicLogic.Clear ();
+            Assert.That (basicLogic.Arr, Is.All.EqualTo (false));
+        }
     }
 }

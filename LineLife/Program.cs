@@ -16,10 +16,17 @@ namespace LineLife {
             System.Console.WriteLine (logic.ToString ());
             var fullRawLogic = new LineLifeLogic (80);
             System.Console.WriteLine (fullRawLogic.ToString ());
-            fullRawLogic.SetMiddleOne ();
-            System.Console.WriteLine (fullRawLogic.ToString ());
             fullRawLogic.SetRandom ();
             System.Console.WriteLine (fullRawLogic.ToString ());
+            fullRawLogic.Clear ();
+            fullRawLogic.SetMiddleOne ();
+            System.Console.WriteLine (fullRawLogic.ToString ());
+            fullRawLogic.SetRule (22);
+            while (true) {
+                fullRawLogic.Next ();
+                System.Console.WriteLine (fullRawLogic.ToString ());
+                System.Console.ReadKey ();
+            }
         }
     }
 }

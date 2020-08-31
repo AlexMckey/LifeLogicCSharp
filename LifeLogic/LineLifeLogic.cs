@@ -55,5 +55,9 @@ namespace LifeLogic {
             }
             Array.Copy (newArr, Arr, Size);
         }
+
+        public void Clear () {
+            Array.Clear (Arr, 0, Size);
+        }
     }
 }
