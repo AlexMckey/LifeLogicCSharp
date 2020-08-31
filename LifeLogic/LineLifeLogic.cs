@@ -3,24 +3,24 @@ using System.Collections.Generic;
 
 namespace LifeLogic {
     public class LineLifeLogic {
-        int size;
-        bool[] arr;
-        bool[] rule = new bool[8];
+        public int Size { get; private set; }
+        public bool[] Arr { get; }
+        public bool[] Rule { get; } = new bool[8];
 
         public LineLifeLogic (int size) {
-            this.size = size;
-            this.arr = new bool[size];
+            this.Size = size;
+            this.Arr = new bool[size];
         }
 
         public LineLifeLogic (bool[] bools) {
-            this.size = bools.Length;
-            this.arr = bools;
+            this.Size = bools.Length;
+            this.Arr = bools;
         }
 
-        public SetRandom () {
+        public void SetRandom () {
             Random random = new Random ();
-            foreach (var v in arr) {
-                v = random.Next (2) == 1;
+            for (int i = 0; i < Size; i++) {
+                Arr[i] = random.Next (2) == 1;
             }
         }
     }
