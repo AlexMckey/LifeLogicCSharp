@@ -32,7 +32,7 @@ namespace LifeLogic {
         public override string ToString () {
             var sb = new StringBuilder (Size);
             foreach (var item in Arr) {
-                sb.Append (item ? "#" : " ");
+                sb.Append (item ? "#" : ".");
             }
             return sb.ToString ();
         }

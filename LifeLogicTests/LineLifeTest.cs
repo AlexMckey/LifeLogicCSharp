@@ -46,8 +46,8 @@ namespace LifeLogicTests {
         [Test]
         public void LineLifeLogicToString () {
             simpleLogic.SetMiddleOne ();
-            Assert.That (simpleLogic.ToString (), Is.EqualTo ("   #  "));
-            Assert.That (basicLogic.ToString (), Is.EqualTo ("# ## "));
+            Assert.That (simpleLogic.ToString (), Is.EqualTo ("...#.."));
+            Assert.That (basicLogic.ToString (), Is.EqualTo ("#.##."));
         }
     }
 }
