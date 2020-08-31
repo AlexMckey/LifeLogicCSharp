@@ -49,5 +49,14 @@ namespace LifeLogicTests {
             Assert.That (simpleLogic.ToString (), Is.EqualTo ("...#.."));
             Assert.That (basicLogic.ToString (), Is.EqualTo ("#.##."));
         }
+
+        [Test]
+        public void LineLifeLogicSetRuleTest () {
+            simpleLogic.SetRule (22);
+            Assert.That (simpleLogic.Rule, Has.Exactly (3).EqualTo (true));
+            Assert.That (simpleLogic.Rule[1], Is.EqualTo (true));
+            Assert.That (simpleLogic.Rule[2], Is.EqualTo (true));
+            Assert.That (simpleLogic.Rule[4], Is.EqualTo (true));
+        }
     }
 }

@@ -36,5 +36,13 @@ namespace LifeLogic {
             }
             return sb.ToString ();
         }
+
+        public void SetRule (int progNum) {
+            var num = progNum % 256;
+            for (int i = 0; i < 8; i++) {
+                Rule[i] = num % 2 == 1;
+                num /= 2;
+            }
+        }
     }
 }
