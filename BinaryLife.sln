@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineLife", "LineLife\LineLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeLogic", "LifeLogic\LifeLogic.csproj", "{DC50301B-BDCA-4475-8C50-E53964A26014}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeLogicTests", "LifeLogicTests\LifeLogicTests.csproj", "{050E7356-EBDB-4F15-AAB6-4E226D02674C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{DC50301B-BDCA-4475-8C50-E53964A26014}.Release|x64.Build.0 = Release|Any CPU
 		{DC50301B-BDCA-4475-8C50-E53964A26014}.Release|x86.ActiveCfg = Release|Any CPU
 		{DC50301B-BDCA-4475-8C50-E53964A26014}.Release|x86.Build.0 = Release|Any CPU
+		{050E7356-EBDB-4F15-AAB6-4E226D02674C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{050E7356-EBDB-4F15-AAB6-4E226D02674C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{050E7356-EBDB-4F15-AAB6-4E226D02674C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{050E7356-EBDB-4F15-AAB6-4E226D02674C}.Debug|x64.Build.0 = Debug|Any CPU
+		{050E7356-EBDB-4F15-AAB6-4E226D02674C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{050E7356-EBDB-4F15-AAB6-4E226D02674C}.Debug|x86.Build.0 = Debug|Any CPU
+		{050E7356-EBDB-4F15-AAB6-4E226D02674C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{050E7356-EBDB-4F15-AAB6-4E226D02674C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{050E7356-EBDB-4F15-AAB6-4E226D02674C}.Release|x64.ActiveCfg = Release|Any CPU
+		{050E7356-EBDB-4F15-AAB6-4E226D02674C}.Release|x64.Build.0 = Release|Any CPU
+		{050E7356-EBDB-4F15-AAB6-4E226D02674C}.Release|x86.ActiveCfg = Release|Any CPU
+		{050E7356-EBDB-4F15-AAB6-4E226D02674C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
