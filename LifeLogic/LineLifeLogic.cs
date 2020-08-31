@@ -44,5 +44,16 @@ namespace LifeLogic {
                 num /= 2;
             }
         }
+
+        public void Next () {
+            var newArr = new bool[Size];
+            for (int i = 0; i < Size; i++) {
+                var ruleIdx = 4 * (Arr[(i - 1 + Size) % Size] ? 1 : 0) +
+                    2 * (Arr[i] ? 1 : 0) +
+                    1 * (Arr[(i + 1) % Size] ? 1 : 0);
+                newArr[i] = Rule[ruleIdx];
+            }
+            Array.Copy (newArr, Arr, Size);
+        }
     }
 }

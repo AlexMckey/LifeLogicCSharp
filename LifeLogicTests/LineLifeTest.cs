@@ -58,5 +58,36 @@ namespace LifeLogicTests {
             Assert.That (simpleLogic.Rule[2], Is.EqualTo (true));
             Assert.That (simpleLogic.Rule[4], Is.EqualTo (true));
         }
+
+        [Test]
+        public void LineLifeLogicSimpleNextGeneration () {
+            Assert.That (simpleLogic.Arr, Is.All.EqualTo (false));
+            simpleLogic.SetRandom ();
+            var prev = simpleLogic.Arr.ToString ();
+            simpleLogic.Next ();
+            Assert.That (prev, Is.EqualTo (simpleLogic.Arr.ToString ()));
+        }
+
+        [Test]
+        public void LineLifeLogicBasicNextGeneration () {
+            Assert.That (simpleLogic.Arr, Is.All.EqualTo (false));
+            simpleLogic.SetMiddleOne ();
+            simpleLogic.SetRule (255);
+            Assert.That (simpleLogic.Arr, Has.Exactly (1).EqualTo (true));
+            Assert.That (simpleLogic.Rule, Is.All.EqualTo (true));
+            simpleLogic.Next ();
+            Assert.That (simpleLogic.Arr, Is.All.EqualTo (true));
+        }
+
+        [Test]
+        public void LineLifeLogicNextGeneration () {
+            Assert.That (simpleLogic.Arr, Is.All.EqualTo (false));
+            simpleLogic.SetMiddleOne ();
+            simpleLogic.SetRule (2);
+            Assert.That (simpleLogic.Arr, Has.Exactly (1).EqualTo (true));
+            Assert.That (simpleLogic.Rule, Has.Exactly (1).EqualTo (true));
+            simpleLogic.Next ();
+            Assert.That (simpleLogic.Arr, Has.Exactly (1).EqualTo (true));
+        }
     }
 }
